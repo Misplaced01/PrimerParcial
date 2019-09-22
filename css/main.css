@@ -192,8 +192,10 @@ a img.logo {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    overflow: hidden;
+    margin-bottom: 10px; 
 }
-/**/
+/*caja de about*/
 .about{
     margin-top: 2em;
 }
@@ -206,7 +208,9 @@ a img.logo {
 }
 /*la caja de la info*/
 .bio-info{
-    overflow: hidden;
+    display: inline-block;
+    width: 50%;
+    float: left;
     max-width: 667px;/*maxima anchura en mobiles para iphone.*/
 }
 
@@ -224,23 +228,26 @@ a img.logo {
     max-width: 667px;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
+/*caja de contacto*/
+.contact{
+    /*display: flex;
+    flex-direction: column;*/
+    display: inline-block;
+    width: 50%;
     text-align: left;
     padding: 0px 1em;
-    width: 463px;
+    max-width: 667px;
 }
-
+/*búho*/
 .contact * + * {
     margin-top: 1.5em;
 }
-
+/*se muestra la contact form de forma flex*/
 .contact-form {
     display: flex;
     flex-direction: column;
 }
-
+/*tamaño de inputs*/
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -271,41 +278,40 @@ a img.logo {
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
-
+/*pie de pagina*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
+    margin-top: 10px;
 }
-
+/*0 margen para que el pie de pagina este justo abajo de la pantalla*/
 footer .social-links {
     margin: 0;
 }
-
+/*menu de navegacion superior*/
 .menu {
     background-color: #112935;
-    position: absolute;
-    z-index: 20;
-    top: 60px;
-    right: 0;
+    position: absolute;/*mantiene su posicion sin importar que*/ 
+    z-index: 20;/*el index z para saber que cosas superponen otras*/
+    top: 60px;/*se posiciona 60px de la parte de arriba*/
+    right: 0;/*se posiciona justo a la derecha*/
     width: 100vw;
-    height: calc(100vh - 60px);
-}
-
-.menu {
+    height: calc(100vh - 60px);/*calcula la altura con una resta*/
     list-style: none;
     text-align: left;
     padding: 1em;
 }
+
+/*cada item de la lista del menu*/
 .menu li {
-    display: block;
+    display: block;/*se muestra en bloque*/
     padding: 0.5em;
     margin-top: 5px;
 }
-
+/*cada link de cada item del menu*/
 .menu li a {
     color: white;
     text-decoration: none;
-    
 }
 
 /* Pesonalizando estilo para tablets*/
@@ -363,6 +369,7 @@ footer .social-links {
         margin: 0 auto;
         max-width: 1024px;
     }
+
 
 
 }
