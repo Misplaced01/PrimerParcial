@@ -222,24 +222,24 @@ a img.logo {
     overflow: hidden;
     font-size: 16px;
     padding: 2em;
-    text-align: left;
-    line-height: 25px;
-    letter-spacing: 2px;
-    max-width: 667px;
+    text-align: left;/*el texto de el parrafo se alinea a la izquierda*/
+    line-height: 25px;/*el tamaño de cada linea*/
+    letter-spacing: 2px;/*el espaciado entre cada letra */
+    max-width: 667px;/*anchura maxima*/
 }
 
 /*caja de contacto*/
 .contact{
     /*display: flex;
     flex-direction: column;*/
-    display: inline-block;
-    width: 50%;
-    text-align: left;
-    padding: 0px 1em;
+    display: inline-block;/*display inline-block ya que de esta manera no utiliza espacio de mas el bloque*/
+    width: 50%;/*utiliza la mitad de el espacio dentro de la caja en la que esta contact*/
+    text-align: left;/*el texto se alinea a la izquierda*/
+    padding: 0px 1em;/*padding de el height 0 y el de el width 1em(16px)*/
     max-width: 667px;
 }
 /*búho*/
-.contact * + * {
+.contact * + * {/*lobotomized owl*/
     margin-top: 1.5em;
 }
 /*se muestra la contact form de forma flex*/
@@ -251,28 +251,28 @@ a img.logo {
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
-    border-radius: 0px 2em;
+    border-radius: 0px 2em;/*el radio del borde de la anchura para que sea mas circular*/
     font-size: 1em;
-    width: 100%;
+    width: 100%;/*utiliza todo el ancho de la caja de contact-form*/
 }
 
 /* Decorando placeholder */
 
-::-webkit-input-placeholder { 
+::-webkit-input-placeholder { /*un webkit para que se pueda ver el cambio de color en mas navegadores*/
     color: #D7DEE6; 
 } 
  
-:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
+:-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } /*color en firefox 18 o menos*/
  
-::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
+::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } /*color en firefox 19 y mas*/
  
 :-ms-input-placeholder { color: #D7DEE6; }
 
-.contact-form input[type=submit] {
-    background-color: #F74442;
-    font-weight: 400;
+.contact-form input[type=submit] {/*el input con tipo submit para que el formulario mande informacion*/
+    background-color: #F74442;/*color de el boton*/
+    font-weight: 400;/*google fonts*/
     color: white;
-    font-size: 1rem;
+    font-size: 1rem;/*tamaño de el texto en el boton*/
 }
 
 .black-decoration{
@@ -282,7 +282,7 @@ a img.logo {
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
-    margin-top: 10px;
+    margin-top: 10px;/*margen de arriba*/
 }
 /*0 margen para que el pie de pagina este justo abajo de la pantalla*/
 footer .social-links {
