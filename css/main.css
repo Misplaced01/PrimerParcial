@@ -20,6 +20,7 @@ body {
 /* cabecera de la pagina, se muestra con flex y tambien el contenido de la cabecera tiene espacios entre ellos*/
 .header {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
@@ -37,60 +38,67 @@ nav{
     display: none;
 }
 
+/*esta clase sirve para no mostrar algunas cosas en mobiles*/
 .hide-mobile {
     display: none;
 }
 
+/*en general, aumenta el tamaño de el texto y el espaciado de los parrafos*/
 p{
     font-size: 0.75em;
     padding: 0em;
     line-height: 25px;
 }
 
+/*margen de la izquierda de el logo superior izquierdo*/
 a img.logo {
     margin-left: 50px;
 }
 
+/*este es el tamaño de el logo */
 .logo {
     width: 90px;
     margin: 1em;
 }
 
+/*esta es la clase que contiene simbolos de barras y una equis, solo se muestran en mobiles*/
 .options {
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    top: 30%;
-    right: 95%;
-    font-size: 1.5rem;
+    color: inherit;/*recibe el color de su padre*/
+    text-decoration: none;/*quita toda decoracion de todos los enlaces que se encuentran esta clase*/
+    position: relative;/*la posición es relativa con las otras cajas que tiene antes y despues*/
+    top: 30%;/*esto pone la distancia de options a 30% hacia arriba en la pantalla*/
+    right: 95%;/*esto pone la distancia de options a 95% hacia la derecha en la pantalla*/
+    font-size: 1.5rem;/*el tamaño de las letras en general, esto cambia el tamaño de los simbolos*/
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    display: flex;/*la forma en la que se muestran los simbolos*/
+    flex-wrap: wrap;/*para que cuando la pantalla se haga muy pequeña se mueva el simbolo de la derecha hacia abajo y no se sobrepongan*/
+    align-items: flex-start;/*alinea los objetos de la clase al principio en el axis secundario, es decir arriba*/
 
 }
+/*el ultimo hijo de los i, en los cuales se encuntran los simbolos, aumenta en tamaño.*/
 .options i:last-child {
     font-size: 1.6rem;
 }
 
 /* Big area */
 .big-hero img {
-    width: 150px;
+    width: 150px;/*todas las imagenes dentro de big hero tendran ancho de 150px*/
 }
-
+/*el titulo de big hero*/
 .big-hero h2 {
     font-size: 1.875em;
-    font-weight: 700;
+    font-weight: 700;/*aumenta el font weight para cambiar la forma que se muestra el google font*/
     letter-spacing: 0.002em;
     margin-top: 1em ;
     margin: 1em 0em;
 }
-
+/*el parrafo abajo de el titulo*/
 .big-hero p {
     font-size: 0.7em;;
     color: #D7DEE6;
 }
 
+/*la flecha que aparece en dispositivos no mobiles*/
 .big-hero .hide-mobile>i{
     font-size: 7em;
     color: #0AC693;
@@ -99,75 +107,79 @@ a img.logo {
 
 /* Social links*/
 .social-links{
-    list-style: none;
+    list-style: none;/*social-links es una lista no ordenada, le quitamos todo formato*/
     padding: 0;
     margin-top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center/*justificamos todo el contenido de la caja al centro de la pantalla*/
 
 }
 
+/*links en social*/
 .social-links li a{
     display: flex;
     color: #D7DEE6;
-    text-decoration: none;
+    text-decoration: none;/*quitamos la decoracion ya que son links, si no se mostraría una underline*/
     font-size: 12em;
-    margin: 0 20px;
+    margin: 0 20px;/*margen de arriba y abajo de 0, derecha a izquierda de 20*/
     
 }
 
-
+/*toda la caja de los articulos*/
 .green-area {
-    background-color: #0AC693; 
+    background-color: #0AC693;
+    display: flex;
+    flex-flow: row wrap; 
 }
 
-
+/*clase que contiene todos los articulos junto con los titulos*/
 .post {
     padding: 1em;
-    margin-bottom: -2px;
+    margin-bottom: -2px;/*margen negativo para que se acerquen*/
 }
+/*todo titulo dentro de la caja de los articulos*/
 .post h2 {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 700;/*font de google fonts*/
     font-size: 1.125em;
-    margin: 1em;
+    margin: 1em;/*margen a todo su alrededor*/
 }
-
+/*quitamos todo formato a la lista*/
 .post ul {
     list-style: none;
 }
-
+/*este bloque sirve para que el tamaño de cada caja de artículos se mantenga en los tamaños deseados para mobiles*/
 .post ul li {
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
 }
-
+/*cada articulo en post*/
 .post ul li article {
-    overflow: hidden;
-    border-radius: 10px;
+    overflow: hidden;/*esconde todo lo que se salga de la caja*/
+    border-radius: 10px;/*le da forma a el borde*/
     background-color: #ffffff;
     text-align: left;
-    padding-bottom: 2em;
+    padding-bottom: 2em;/*el espacio dentro de la caja para que el texto no se pegue mucho abajo*/
 }
-
+/*cada imagen de cada articulo*/
 .post article img{
     height: 150px;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover;/*hace que la imagen se muestre con toda la resolucion pero hace que la corte*/
 }
-
+/*cada titulo terceario*/
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
-    padding: 0em 1rem;
+    padding: 0em 1rem;/*espacio dentro de la caja arriba y abajo de 0, derecha e izquierda de 1rem*/
     font-size: 0.9em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap;/*no utiliza el espacio blanco para moverse*/
+    overflow: hidden;/*todo lo que se salga de la caja se esconde*/
+    text-overflow: ellipsis;/*si el texto se sale de la caja, pone puntos suspensivos par aque no se salga y aun asi puedas verlo*/
 }
-
+/*cada parrafo de los articulos*/
 .post article p {
     color:#112935;
     font-size: 0.75em;
@@ -176,32 +188,32 @@ a img.logo {
 }
 
 /* About */
-.about.container{
+.about.container{/*mostrar con flex toda la caja*/
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
+/**/
 .about{
     margin-top: 2em;
 }
-
+/*los titulos de la caja de about*/
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
     margin: 2em;
 }
-
+/*la caja de la info*/
 .bio-info{
     overflow: hidden;
-    width: 463px;
+    max-width: 667px;/*maxima anchura en mobiles para iphone.*/
 }
 
 .bio-info img{
     width: 200px;
 }
-
+/*el parrafo de bio-info*/
 .bio-info p{
     overflow: hidden;
     font-size: 16px;
@@ -209,7 +221,7 @@ a img.logo {
     text-align: left;
     line-height: 25px;
     letter-spacing: 2px;
-    width: 463px;
+    max-width: 667px;
 }
 
 .contact {
