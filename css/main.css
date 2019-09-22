@@ -316,21 +316,20 @@ footer .social-links {
 
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
-  
+    /*cada lista dentro de las tablets */
     .post ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: center;/*el contenido se centra*/
     }
-    
+    /*cada item de la lista*/
     .post ul li {
-        min-height: 350px;
-        max-height: 3500px;
+        min-height: 350px;/*este tamaño es importante al momento de acostar la vista*/
+        max-height: 3500px;/*tamaño maximo en tablets*/
         margin: 1rem 2rem;
-        flex: 1 0 300px;
+        flex: 1 0 300px;/**/
     }
-
 
     .logo {
         width: 150px;
@@ -355,15 +354,11 @@ footer .social-links {
         margin-top: 1em;
     }
 
-
-
-
-    /*TODO: FALTA CSS */
 } 
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
+       /*el tamaño de container maximo tamaño de el contenedor para que el contenido no se haga mas grande en pantallas de 1024px*/
     .container {
         width: 80%;
         margin: 0 auto;
@@ -376,7 +371,7 @@ footer .social-links {
 
 @media only screen and (min-width: 1440px) {
 
-    /*TODO: FALTA CSS */
+    /*el tamaño de el contenedor para pantallas de 1440px*/
     .container {
         width: 80%;
         margin: 0 auto;
